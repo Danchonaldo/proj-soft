@@ -1,10 +1,9 @@
-package Controller;
+package org.example.projsoft.Controller;
 
-import Service.FootballerServiceImpl;
+import org.example.projsoft.Service.impl.FootballerServiceImpl;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-import DTO.FootballerDTO;
-import Service.FootballerService;
+import org.example.projsoft.DTO.FootballerDTO;
 
 @RestController
 @RequestMapping("/api/footballers")
@@ -27,7 +26,7 @@ public class FootballerController {
     }
 
     @PostMapping
-    public FootballerDTO create(@RequestBody FootballerDTO dto) {
+    public FootballerDTO add(@RequestBody FootballerDTO dto) {
         return service.addFootballer(dto);
     }
 

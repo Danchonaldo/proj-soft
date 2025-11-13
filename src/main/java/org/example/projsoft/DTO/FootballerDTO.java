@@ -1,7 +1,5 @@
-package DTO;
+package org.example.projsoft.DTO;
 
-import Entite.Club;
-import Entite.Footballer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,5 +1,5 @@
-package Service;
-import DTO.FootballerDTO;
+package org.example.projsoft.Service;
+import org.example.projsoft.DTO.FootballerDTO;
 import java.util.List;
 
 public interface FootballerService{

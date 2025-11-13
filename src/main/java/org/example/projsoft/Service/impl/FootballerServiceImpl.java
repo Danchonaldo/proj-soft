@@ -1,12 +1,13 @@
-package Service;
+package org.example.projsoft.Service.impl;
 
 import lombok.RequiredArgsConstructor;
+import org.example.projsoft.Service.FootballerService;
 import org.springframework.stereotype.Service;
-import DTO.FootballerDTO;
-import Entite.Club;
-import Entite.Footballer;
-import Repository.ClubRepository;
-import Repository.FootballerRepository;
+import org.example.projsoft.DTO.FootballerDTO;
+import org.example.projsoft.Entite.Club;
+import org.example.projsoft.Entite.Footballer;
+import org.example.projsoft.Repository.ClubRepository;
+import org.example.projsoft.Repository.FootballerRepository;
 
 import java.util.ArrayList;
 import java.util.List;

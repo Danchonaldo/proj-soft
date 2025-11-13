@@ -1,4 +1,4 @@
-package Entite;
+package org.example.projsoft.Entite;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
