@@ -1,5 +1,6 @@
 package org.example.projsoft.Service.impl;
 
+import lombok.Builder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.example.projsoft.DTO.ClubDTO;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.example.projsoft.Service.ClubService;
 
-
+@Builder
 @Service
 @RequiredArgsConstructor
 public class ClubServiceImpl implements ClubService {
@@ -71,18 +72,18 @@ public class ClubServiceImpl implements ClubService {
 
 
     private ClubDTO toDto(Club club) {
-        ClubDTO dto = new ClubDTO();
-        dto.setId(club.getId());
-        dto.setName(club.getName());
-        dto.setCountry(club.getCountry());
-        dto.setFoundedYear(club.getFoundedYear());
-        return dto;
+        return ClubDTO.builder()
+                .id(club.getId())
+                .name(club.getName())
+//                .country(club.getCountry())
+                .foundedYear(club.getFoundedYear())
+                .build();
     }
 
     private Club toEntity(ClubDTO dto) {
         Club club = new Club();
         club.setName(dto.getName());
-        club.setCountry(dto.getCountry());
+//        club.setCountry(dto.getCountry());
         club.setFoundedYear(dto.getFoundedYear());
         return club;
     }

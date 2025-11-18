@@ -22,5 +22,10 @@ public class Footballer {
     @ManyToOne
     @JoinColumn(name = "club_id")
     private Club club;
+
+    @ManyToOne
+    @JoinColumn(name = "country_id")
+    private Country country;  // ← ЭТОГО НЕ ХВАТАЛО
 }
+
 

@@ -12,13 +12,17 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Club {
+    @ManyToOne
+    @JoinColumn(name = "country_id")
+    private Country country;
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
-    private String country;
+//    private String country;
     private int foundedYear;
 
     @OneToMany(mappedBy = "club", cascade = CascadeType.ALL)
